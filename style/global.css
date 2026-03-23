@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:rgb(232 244 252 / 50%);
+    --sec-color: #0c1e24;
+    --card-color: #1a3d49;
+    --color: #2196f3;
+    --col: #122c34;
+}
+body{
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    direction: rtl;
+    line-height: 1.5;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: rgba(12, 30, 36, .92);
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 20px;
+    color: rgba(249, 252, 254, 0.962);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    gap: 12px;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    margin-left: 20px;
+    transition: all 0.3s;
+}
+.menu li a{
+    gap: 5px;
+    color: var(--main-color);
+    display: block;
+    transition: all 0.3s;
+}
+.menu li:hover{
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--color);
+}
+.menu li a:hover{
+    color: rgba(249, 252, 254, 0.962);
+}
+
+/* hero */
+.hero{
+    background-image: url(../image/مكونات\ إصلاح\ الهواتف\ المحمولة.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(238 248 255 / 24%);
+}
+footer p{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    text-align: center;
+    
+}
+strong{
+    color: var(--color);
+}
+.burger span{
+    background-color: white;
+    height: 4px;
+    width: 30px;
+    gap: 7px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    display: none;
+    transition: all 0.3s;
+}
+#toggle{
+    display: none;
+}
+@media (max-width:767px) {
+    header{
+        height: 70px;
+        padding: 15px 25px;;
+    }
+    .burger span{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 200px;
+        background-color: #1a3d49;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .menu a{
+        padding: 10px;
+        
+    }
+    #toggle:checked ~ .menu{
+        right: 212px;
+        opacity: 1;
+    }
+    #toggle:checked + .burger span:nth-child(1){
+        transform: rotate(45deg) translate(6px,6px);
+    }
+    #toggle:checked + .burger span:nth-child(2){
+        opacity: 0;
+    }
+    #toggle:checked + .burger span:nth-child(3){
+        transform: rotate(-45deg) translate(6px,-6px);
+    }
+}
