@@ -65,6 +65,7 @@ nav{
 .menu li{
     margin-left: 20px;
     transition: 0.3s;
+    padding: 20px;
 }
 
 .menu li a{
@@ -81,7 +82,7 @@ nav{
     color: var(--color);
 }
 
-/* 🔥 HERO */
+/* HERO */
 .hero{
     position: relative;
     background-image: url(../image/W_qqUzdVvcWH3zQY1sLErEmDh1J05rJO-p4IBBzedG_b0GBGqI6PUCzabgIuxqAmf_eelxYaMqzsehoK3_0A-emYKM0EEjvVsTQhGWh6Als9bDYbaYR0G5kZn4RhCtVGs_TLZi0ArXQRf3N7pgp4vm5AaNyQ71ilujQ-4AiwFWGJoMeqbDyHDJO6e7R7Bc5x.jpg); 
@@ -196,12 +197,12 @@ img{
     }
 
     #toggle:checked ~ .menu{
-        right: 0;
+        right: 74%;
         opacity: 1;
     }
 
     #toggle:checked + .burger span:nth-child(1){
-        transform: rotate(45deg) translate(5px,5px);
+        transform: rotate(45deg) translate(7px, 7px);
     }
 
     #toggle:checked + .burger span:nth-child(2){
