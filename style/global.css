@@ -196,7 +196,7 @@ img{
     }
 
     #toggle:checked ~ .menu{
-        right: 52%;
+        right: 212px;
         opacity: 1;
     }
 
